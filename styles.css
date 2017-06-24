@@ -1,0 +1,54 @@
+/* Resets
+---------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+
+/* Fonts
+---------------------*/
+html {
+  font-family: 'PT Sans', serif;
+  background-color: #F2F2F2;
+  color: #2F2E2E;
+}
+
+h1, h2 {
+  font-family: 'PT Serif', serif;
+}
+
+button {
+  font-family: 'PT Sans', serif;
+}
+
+
+/* Header
+---------------------*/
+header {
+  background-color: #2F2E2E;
+}
+
+.menu-button {
+  background-color: #F2F2F2;
+  color: #2F2E2E;
+}
