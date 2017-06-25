@@ -19,6 +19,10 @@ nav ul {
   padding: 0;
 }
 
+a {
+  color: #087E8B;
+}
+
 button {
   margin: 1em;
   border: none;
@@ -103,6 +107,18 @@ main {
 }
 
 
+/* Contact section
+---------------------*/
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-detail {
+  width: 100%;
+}
+
+
 /* Responsive
 ---------------------*/
 /* Header */
@@ -115,5 +131,18 @@ main {
 
   .page-title {
     margin-left: 1rem;
+  }
+}
+
+/* Contact section */
+@media all and (min-width: 500px) {
+  .contact-detail {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .contact-detail {
+    width: 25%;
   }
 }
