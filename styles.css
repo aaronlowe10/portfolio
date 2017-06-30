@@ -19,6 +19,10 @@ nav ul {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: #087E8B;
 }
@@ -104,6 +108,30 @@ nav a:hover {
 ---------------------*/
 main {
   padding: 1em;
+}
+
+
+/* Projects section
+---------------------*/
+.project {
+  position: relative;
+}
+
+.banner {
+  display: inline-block;
+  width: 95%;
+  vertical-align: middle;
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+}
+
+.project::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background: url("images/triangle.svg") left center no-repeat;
+  content: "";
 }
 
 
