@@ -124,8 +124,14 @@ main {
 
 /* Projects section
 ---------------------*/
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .project {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 .banner-wrapper {
@@ -194,6 +200,12 @@ main {
 }
 
 /* Contact section */
+@media all and (min-width: 800px) {
+  .project {
+    max-width: calc(50% - 1em);
+    margin: 0.5em;
+  }
+}
 @media all and (min-width: 500px) {
   .contact-detail {
     width: 50%;
