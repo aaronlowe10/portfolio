@@ -48,6 +48,11 @@ body.modal-open {
   display: none;
 }
 
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 
 /* Fonts
 ---------------------*/
@@ -70,10 +75,13 @@ button {
 /* Header
 ---------------------*/
 header {
+  background-color: #3C3C3C;
+}
+
+header > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3C3C3C;
 }
 
 .page-title {
@@ -115,6 +123,18 @@ nav a:hover {
   transition: background-color 0.3s linear, color 0.3s linear;
 }
 
+@media all and (min-width: 650px) {
+  header > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .page-title {
+    margin-left: 1rem;
+  }
+}
+
 /* Main
 ---------------------*/
 main {
@@ -132,6 +152,14 @@ main {
 
 .project {
   margin: 0.5em 0;
+  cursor: pointer;
+}
+
+@media all and (min-width: 800px) {
+  .project {
+    max-width: calc(50% - 1em);
+    margin: 0.5em;
+  }
 }
 
 .banner-wrapper {
@@ -181,39 +209,11 @@ main {
 
 .contact-detail {
   width: 100%;
+  margin: 0.5em;
 }
 
-
-/* Responsive
----------------------*/
-/* Header */
 @media all and (min-width: 650px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-
-  .page-title {
-    margin-left: 1rem;
-  }
-}
-
-/* Contact section */
-@media all and (min-width: 800px) {
-  .project {
-    max-width: calc(50% - 1em);
-    margin: 0.5em;
-  }
-}
-@media all and (min-width: 500px) {
   .contact-detail {
-    width: 50%;
-  }
-}
-
-@media all and (min-width: 1000px) {
-  .contact-detail {
-    width: 25%;
+    max-width: calc(33% - 1em);
   }
 }
