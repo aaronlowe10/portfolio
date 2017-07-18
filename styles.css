@@ -1,0 +1,217 @@
+/*https://coolors.co/939fab-087e8b-ff5a5f-3c3c3c-f5f5f5*/
+/* Resets
+---------------------*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+nav ul {
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  color: #087E8B; }
+
+button {
+  margin: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #FF5A5F;
+  color: #F5F5F5; }
+
+/* General
+---------------------*/
+body.modal-open {
+  overflow-y: hidden; }
+
+.hidden {
+  display: none; }
+
+.content {
+  max-width: 980px;
+  margin: 0 auto; }
+
+/* Fonts
+---------------------*/
+html {
+  font-family: 'PT Sans', serif;
+  background-color: #F5F5F5;
+  color: #3C3C3C; }
+
+h1, h2, h3 {
+  font-family: 'PT Serif', serif;
+  font-weight: normal; }
+
+button {
+  font-family: 'PT Sans', serif; }
+
+/* Header
+---------------------*/
+header {
+  background-color: #3C3C3C; }
+
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.page-title {
+  color: #F5F5F5; }
+
+nav {
+  width: 100%;
+  max-width: 400px; }
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%; }
+
+nav li {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 100%; }
+
+nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  text-align: center;
+  color: #FF5A5F; }
+
+nav a:hover {
+  background-color: #FF5A5F;
+  color: #F5F5F5;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear; }
+
+@media all and (min-width: 650px) {
+  header > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .page-title {
+    margin-left: 1rem; } }
+
+/* Main
+---------------------*/
+main {
+  padding: 1em; }
+
+/* Projects section
+---------------------*/
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.project {
+  margin: 0.5em 0;
+  cursor: pointer; }
+
+@media all and (min-width: 800px) {
+  .project {
+    max-width: calc(50% - 1em);
+    margin: 0.5em; } }
+
+.banner-wrapper {
+  position: relative; }
+
+.banner {
+  display: inline-block;
+  width: 95%;
+  vertical-align: middle;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out; }
+
+.project:hover .banner {
+  -webkit-filter: none;
+          filter: none; }
+
+.details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 10; }
+
+.details-content-wrap {
+  margin: 10px;
+  padding: 1em;
+  background-color: #F5F5F5; }
+
+/* Contact section
+---------------------*/
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.contact-detail {
+  width: 100%;
+  margin: 0.5em; }
+
+@media all and (min-width: 650px) {
+  .contact-detail {
+    max-width: calc(33% - 1em); } }
