@@ -16,7 +16,12 @@ gulp.task('html', () => {
 gulp.task('js', () => {
   return gulp.src('script.js')
     .pipe(gulp.dest(BUILD_FOLDER));
-})
+});
+
+gulp.task('images', () => {
+  return gulp.src(path.join('images', '*'))
+    .pipe(gulp.dest(path.join(BUILD_FOLDER, 'images')));
+});
 
 gulp.task('sass', () => {
   return gulp.src('styles.scss')
@@ -25,7 +30,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(BUILD_FOLDER));
 });
 
-gulp.task('deploy', ['html', 'js', 'sass'], () => {
+gulp.task('deploy', ['html', 'js', 'images', 'sass'], () => {
   return gulp.src(path.join(BUILD_FOLDER, '**', '*'))
     .pipe(ghPages());
 });
