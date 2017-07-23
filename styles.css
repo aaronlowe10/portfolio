@@ -23,6 +23,13 @@ img {
 a {
   color: #087E8B; }
 
+section {
+  margin: 3em 0; }
+  section:first-child {
+    margin-top: 0; }
+  section:last-child {
+    margin-bottom: 0; }
+
 button {
   margin: 1em;
   border: none;
@@ -146,42 +153,92 @@ main {
 /* Projects section
 ---------------------*/
 .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  position: relative; }
 
 .project {
   margin: 0.5em 0;
   cursor: pointer; }
 
+@media all and (min-width: 500px) {
+  .projects::after {
+    display: block;
+    clear: both;
+    content: ""; }
+  .project {
+    width: 55%;
+    margin: 2%; } }
+
+@media all and (min-width: 500px) and (max-width: 799px) {
+  .projects {
+    padding-bottom: 25%; }
+  .project:nth-child(2n) {
+    float: right;
+    margin: -25% 0; } }
+
 @media all and (min-width: 800px) {
   .project {
-    max-width: calc(50% - 1em);
-    margin: 0.5em; } }
+    width: 39%;
+    margin: 2% 0; }
+  .project:nth-child(8n - 6) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0; }
+  .project:nth-child(8n - 5) {
+    position: absolute;
+    top: 15%;
+    left: 30.5%; }
+  .project:nth-child(8n - 3) {
+    position: absolute;
+    top: 34%;
+    right: 0;
+    margin-top: 0; }
+  .project:nth-child(8n - 2) {
+    position: absolute;
+    top: 49%;
+    left: 30.5%; }
+  .project:nth-child(8n) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0; } }
 
-.banner-wrapper {
+.project-teaser {
   position: relative; }
 
-.banner {
+.project-image {
   display: inline-block;
-  width: 95%;
+  margin: -6.69873% 0;
+  width: 100%;
   vertical-align: middle;
-  -webkit-clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  -webkit-transition: -webkit-filter 0.3s ease-in-out;
-  transition: -webkit-filter 0.3s ease-in-out;
-  transition: filter 0.3s ease-in-out;
-  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out; }
+  -webkit-clip-path: polygon(25% 6.69873%, 75% 6.69873%, 100% 50%, 75% 93.30127%, 25% 93.30127%, 0 50%);
+          clip-path: polygon(25% 6.69873%, 75% 6.69873%, 100% 50%, 75% 93.30127%, 25% 93.30127%, 0 50%); }
 
-.project:hover .banner {
-  -webkit-filter: none;
-          filter: none; }
+@media all and (min-width: 800px) {
+  .project-image {
+    -webkit-filter: grayscale(0.8);
+            filter: grayscale(0.8);
+    -webkit-transition: -webkit-filter 0.3s ease-in-out;
+    transition: -webkit-filter 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out; }
+  .project:hover .project-image {
+    -webkit-filter: none;
+            filter: none; } }
+
+.project-text-wrap {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  padding: 1em 0.5em;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+          clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
+  background-color: rgba(255, 90, 95, 0.5);
+  color: #F5F5F5; }
+  .project-text-wrap h3 {
+    margin-top: 0; }
 
 .details {
   position: fixed;
