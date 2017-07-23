@@ -319,11 +319,32 @@ main {
 
 .contact-detail {
   width: 100%;
-  margin: 0.5em;
+  margin: 1.5em 0.5em;
 }
 
 @media all and (min-width: 650px) {
   .contact-detail {
     max-width: calc(33% - 1em);
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.contact-text {
+  display: inline-block;
+  width: calc(100% - 55px);
+  vertical-align: middle;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
