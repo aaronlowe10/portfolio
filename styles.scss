@@ -30,6 +30,18 @@ a {
   color: $link-colour;
 }
 
+section {
+  margin: 3em 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 button {
   margin: 1em;
   border: none;
@@ -148,9 +160,7 @@ main {
 /* Projects section
 ---------------------*/
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  position: relative;
 }
 
 .project {
@@ -158,10 +168,67 @@ main {
   cursor: pointer;
 }
 
+@media all and (min-width: 500px) {
+  .projects::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .project {
+    width: 55%;
+    margin: 2%;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 799px) {
+  .projects {
+    padding-bottom: 25%;
+  }
+
+  .project:nth-child(2n) {
+    float: right;
+    margin: -25% 0;
+  }
+}
+
 @media all and (min-width: 800px) {
   .project {
-    max-width: calc(50% - 1em);
-    margin: 0.5em;
+    width: 39%;
+    margin: 2% 0;
+  }
+
+  .project:nth-child(8n - 6) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 5) {
+    position: absolute;
+    top: 15%;
+    left: 30.5%;
+  }
+
+  .project:nth-child(8n - 3) {
+    position: absolute;
+    top: 34%;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 2) {
+    position: absolute;
+    top: 49%;
+    left: 30.5%;
+  }
+
+  .project:nth-child(8n) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
   }
 }
 
