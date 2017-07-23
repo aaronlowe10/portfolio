@@ -306,6 +306,17 @@ main {
     max-height: 250px;
     margin: 1em auto;
   }
+
+  .images {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: calc(100% - 2em);
+      margin: 1em;
+      vertical-align: middle;
+    }
+  }
 }
 
 @media all and (min-width: 1000px) {
