@@ -267,6 +267,10 @@ main {
     font-size: 2em;
     line-height: 1;
     cursor: pointer; }
+  .details-content-wrap img {
+    display: block;
+    max-height: 250px;
+    margin: 0 auto; }
 
 @media all and (min-width: 1000px) {
   .details-content-wrap {
