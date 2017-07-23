@@ -249,7 +249,8 @@ main {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-y: auto;
-  z-index: 10; }
+  z-index: 10;
+  cursor: initial; }
 
 .details-content-wrap {
   position: relative;
