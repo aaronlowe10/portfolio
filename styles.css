@@ -270,7 +270,7 @@ main {
   .details-content-wrap img {
     display: block;
     max-height: 250px;
-    margin: 0 auto; }
+    margin: 1em auto; }
 
 @media all and (min-width: 1000px) {
   .details-content-wrap {
