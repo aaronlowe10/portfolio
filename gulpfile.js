@@ -19,7 +19,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src(path.join('images', '*'))
+  return gulp.src(path.join('images', '**', '*'))
     .pipe(gulp.dest(path.join(BUILD_FOLDER, 'images')));
 });
 
