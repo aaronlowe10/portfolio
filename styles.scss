@@ -288,6 +288,13 @@ main {
   background-color: #F5F5F5;
 }
 
+@media all and (min-width: 1000px) {
+  .details-content-wrap {
+    max-width: 980px;
+    margin: 1em auto;
+  }
+}
+
 /* Contact section
 ---------------------*/
 .contact-info {
