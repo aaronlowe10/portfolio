@@ -300,6 +300,12 @@ main {
     line-height: 1;
     cursor: pointer;
   }
+
+  img {
+    display: block;
+    max-height: 250px;
+    margin: 0 auto;
+  }
 }
 
 @media all and (min-width: 1000px) {
