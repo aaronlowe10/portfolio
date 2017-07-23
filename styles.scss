@@ -339,6 +339,7 @@ main {
   display: inline-block;
   width: calc(100% - 55px);
   vertical-align: middle;
+  word-wrap: break-word;
 
   h3 {
     margin-top: 0;
