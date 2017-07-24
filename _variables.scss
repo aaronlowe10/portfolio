@@ -14,5 +14,9 @@ $black: #3C3C3C;
 
 $link-colour: $blue;
 
-$popup-background: $black;
+$button-text-colour: $white;
+$button-background-colour: $red;
+
+$popup-overlay-colour: rgba(0, 0, 0, 0.8);
+$popup-background: $popup-overlay-colour;
 $popup-text: $white;
