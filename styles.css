@@ -151,6 +151,28 @@ nav a:hover {
 main {
   padding: 1em; }
 
+/* Skills section
+---------------------*/
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.skill {
+  width: 180px; }
+
 /* Projects section
 ---------------------*/
 .projects {
@@ -237,11 +259,14 @@ main {
   height: 50%;
   padding: 0 3em;
   text-align: center;
-  font-size: 1.2em;
   background-color: rgba(232, 82, 87, 0.7);
   color: #F5F5F5;
   -webkit-transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
           transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15); }
+
+@media all and (min-width: 800px) {
+  .project-text-wrap {
+    font-size: 1.2em; } }
 
 .details {
   position: fixed;
