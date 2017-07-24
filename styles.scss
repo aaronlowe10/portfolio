@@ -156,6 +156,20 @@ main {
   padding: 1em;
 }
 
+/* Skills section
+---------------------*/
+.skills {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: 180px;
+}
 
 /* Projects section
 ---------------------*/
@@ -270,10 +284,15 @@ main {
   height: 50%;
   padding: 0 3em;
   text-align: center;
-  font-size: 1.2em;
   background-color: $project-title-background;
   color: $white;
   transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
+}
+
+@media all and (min-width: 800px) {
+  .project-text-wrap {
+    font-size: 1.2em;
+  }
 }
 
 .details {
