@@ -12,10 +12,20 @@ $red: #FF5A5F;
 $blue: #087E8B;
 $black: #3C3C3C;
 
+$background-colour: $white;
+$text-colour: $black;
+
 $link-colour: $blue;
+
+$nav-background: $black;
+$nav-link-text: $red;
+$nav-link-text-hover: $white;
+$nav-link-background-hover: $red;
 
 $button-text-colour: $white;
 $button-background-colour: $red;
+
+$project-title-background: rgba($red, 0.7);
 
 $popup-overlay-colour: rgba(0, 0, 0, 0.8);
 $popup-background: $popup-overlay-colour;
