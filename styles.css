@@ -86,7 +86,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #3C3C3C;
-  z-index: 100; }
+  z-index: 5; }
 
 header > div {
   display: -webkit-box;
