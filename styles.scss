@@ -160,15 +160,23 @@ main {
 ---------------------*/
 .skills {
   display: flex;
-  max-width: 100%;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: top;
   flex-wrap: wrap;
+  margin: 0 -1em;
 }
 
 .skill {
-  width: 180px;
+  width: 128px;
+  margin: 1em;
+  text-align: center;
+}
+
+@media all and (min-width: 400px) {
+  .skill {
+    width: 140px;
+  }
 }
 
 /* Projects section
