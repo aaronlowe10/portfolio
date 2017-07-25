@@ -386,6 +386,10 @@ nav {
   transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
 }
 
+.summary {
+  // TODO: Style summary lines
+}
+
 @media all and (min-width: 550px) {
   .project-text-wrap {
     font-size: 1.2em;
