@@ -25,6 +25,9 @@ h3 {
   font-size: 1.2em;
   margin: 1em 0; }
 
+main {
+  display: block; }
+
 nav ul {
   margin: 0;
   padding: 0; }
@@ -329,6 +332,10 @@ nav {
 @media all and (min-width: 550px) {
   .project-text-wrap {
     font-size: 1.2em; } }
+
+@media all and (min-width: 1600px) {
+  .project-text-wrap {
+    font-size: 1.5em; } }
 
 .details {
   position: fixed;
