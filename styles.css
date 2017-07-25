@@ -59,9 +59,9 @@ body.modal-open {
 .hidden {
   display: none; }
 
-.content {
-  max-width: 980px;
-  margin: 0 auto; }
+@media all and (min-width: 980px) {
+  .content {
+    margin: 0 5%; } }
 
 /* Fonts
 ---------------------*/
@@ -229,7 +229,7 @@ nav {
     float: right;
     margin: -25% 0; } }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 800px) and (max-width: 1149px) {
   .project {
     width: 39%;
     margin: 2% 0; }
@@ -256,6 +256,42 @@ nav {
     bottom: 0;
     right: 0;
     margin-bottom: 0; } }
+
+@media all and (min-width: 1150px) {
+  .projects {
+    padding-bottom: 14%; }
+  .project {
+    width: 29%; }
+  .project:nth-child(8n - 5) {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    margin-top: 0; }
+  .project:nth-child(8n - 4) {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    margin-top: 0; }
+  .project:nth-child(8n - 3) {
+    position: absolute;
+    top: 0;
+    left: 46%;
+    margin-top: 0; }
+  .project:nth-child(8n - 2) {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    margin-top: 0; }
+  .project:nth-child(8n - 1) {
+    position: absolute;
+    top: 20%;
+    left: 69%;
+    margin-top: 0; }
+  .project:nth-child(8n) {
+    position: absolute;
+    top: 60%;
+    left: 69%;
+    margin-top: 0; } }
 
 .project-teaser {
   position: relative;
@@ -290,7 +326,7 @@ nav {
   -webkit-transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
           transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15); }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 550px) {
   .project-text-wrap {
     font-size: 1.2em; } }
 
