@@ -329,6 +329,9 @@ nav {
   -webkit-transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
           transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15); }
 
+.summary {
+  font-style: italic; }
+
 @media all and (min-width: 550px) {
   .project-text-wrap {
     font-size: 1.2em; } }
