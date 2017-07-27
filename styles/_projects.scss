@@ -1,0 +1,244 @@
+.projects {
+  position: relative;
+}
+
+.project {
+  margin: 1em 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.fluid-height-wrapper {
+  height: 0;
+
+  padding-bottom: 86%;
+}
+
+// 2 column layout
+@media all and (min-width: 500px) {
+  .projects::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .project {
+    width: 55%;
+    margin: 2%;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 799px) {
+  .projects {
+    padding-bottom: 25%;
+  }
+
+  .project:nth-child(2n) {
+    float: right;
+    margin: -25% 0;
+  }
+}
+
+// 3 column layout
+@media all and (min-width: 800px) and (max-width: 1149px) {
+  .project {
+    width: 39%;
+    margin: 2% 0;
+  }
+
+  .project:nth-child(8n - 6) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 5) {
+    position: absolute;
+    top: 15%;
+    left: 30.5%;
+  }
+
+  .project:nth-child(8n - 3) {
+    position: absolute;
+    top: 34%;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 2) {
+    position: absolute;
+    top: 49%;
+    left: 30.5%;
+  }
+
+  .project:nth-child(8n) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+  }
+}
+
+// 4 column layout (2 rows)
+@media all and (min-width: 1150px) {
+  .projects {
+    padding-bottom: 14%;
+  }
+
+  .project {
+    width: 29%;
+  }
+
+  .project:nth-child(8n - 5) {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 4) {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 3) {
+    position: absolute;
+    top: 0;
+    left: 46%;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 2) {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n - 1) {
+    position: absolute;
+    top: 20%;
+    left: 69%;
+    margin-top: 0;
+  }
+
+  .project:nth-child(8n) {
+    position: absolute;
+    top: 60%;
+    left: 69%;
+    margin-top: 0;
+  }
+}
+
+.project-teaser {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-7%) rotate(45deg) skew(15deg, 15deg) scale(0.95);
+}
+
+.project-image {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  transform: skew(-15deg, -15deg) rotate(-45deg) scale(1.15);
+}
+
+@media all and (min-width: 800px) {
+  .project-image {
+    filter: grayscale(0.8);
+    // transition: filter 0.3s linear;
+  }
+
+  .project:hover .project-image {
+    filter: none;
+  }
+}
+
+.project-text-wrap {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  height: 50%;
+  padding: 0 3em;
+  text-align: center;
+  background-color: $project-title-background;
+  color: $white;
+  transform: skew(-15deg, -15deg) rotate(-45deg) translateX(17%) scale(1.15);
+}
+
+.summary {
+  // TODO: Style summary lines
+}
+
+@media all and (min-width: 550px) {
+  .project-text-wrap {
+    font-size: 1.2em;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .project-text-wrap {
+    font-size: 1.5em;
+  }
+}
+
+.details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $popup-overlay-colour;
+  overflow-y: auto;
+  z-index: 10;
+  cursor: initial;
+}
+
+.details-content-wrap {
+  position: relative;
+  margin: 10px;
+  padding: 2em;
+  background-color: $popup-background;
+  color: $popup-text;
+
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 0;
+    padding: 0 0.25em;
+    font-size: 2em;
+    line-height: 1;
+    background-color: transparent;
+    color: $button-background-colour;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-height: 250px;
+    margin: 1em auto;
+  }
+
+  .images {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: calc(100% - 2em);
+      margin: 1em;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .details-content-wrap {
+    max-width: 980px;
+    margin: 3em auto 1em;
+    padding: 2em;
+  }
+}
