@@ -199,22 +199,9 @@
 .details-content-wrap {
   position: relative;
   margin: 10px;
-  padding: 2em;
+  padding: 2em 2em 4em;
   background-color: $popup-background;
   color: $popup-text;
-
-  .top-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    margin: 0;
-    padding: 0 0.25em;
-    font-size: 2em;
-    line-height: 1;
-    background-color: transparent;
-    color: $button-background-colour;
-    cursor: pointer;
-  }
 
   .details-image {
     display: block;
@@ -239,10 +226,37 @@
   }
 }
 
+.top-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0 0.25em;
+  font-size: 2em;
+  line-height: 1;
+  background-color: transparent;
+  color: $button-background-colour;
+  cursor: pointer;
+}
+
+.bottom-close {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  width: calc(100% - 20px);
+  margin: 0;
+  border-radius: 0;
+  padding: 1em;
+}
+
 @media all and (min-width: 1000px) {
   .details-content-wrap {
     max-width: 980px;
     margin: 3em auto 1em;
     padding: 2em;
+  }
+
+  .bottom-close {
+    display: none;
   }
 }
