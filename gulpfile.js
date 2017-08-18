@@ -31,6 +31,11 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(BUILD_FOLDER));
 });
 
+gulp.task('cname', () => {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest(BUILD_FOLDER));
+});
+
 gulp.task('sass-dev', () => {
   return gulp.src(MAIN_STYLE_FILE)
     .pipe(sass().on('error', sass.logError))
@@ -42,7 +47,7 @@ gulp.task('dev', () => {
   gulp.watch(path.join('styles', '*'), ['sass-dev']);
 });
 
-gulp.task('deploy', ['html', 'js', 'images', 'sass'], () => {
+gulp.task('deploy', ['html', 'js', 'images', 'sass', 'cname'], () => {
   return gulp.src(path.join(BUILD_FOLDER, '**', '*'))
     .pipe(ghPages({
       branch: 'master'
