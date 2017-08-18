@@ -50,14 +50,10 @@ a {
 }
 
 section {
-  margin: 3em 0;
+  padding-top: 5em;
 
   &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
+    padding-top: 0;
   }
 }
 
