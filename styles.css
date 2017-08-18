@@ -39,11 +39,9 @@ a {
   color: #087E8B; }
 
 section {
-  margin: 3em 0; }
+  padding-top: 5em; }
   section:first-child {
-    margin-top: 0; }
-  section:last-child {
-    margin-bottom: 0; }
+    padding-top: 0; }
 
 button {
   margin: 1em;
