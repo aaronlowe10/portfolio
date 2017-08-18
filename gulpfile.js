@@ -44,5 +44,7 @@ gulp.task('dev', () => {
 
 gulp.task('deploy', ['html', 'js', 'images', 'sass'], () => {
   return gulp.src(path.join(BUILD_FOLDER, '**', '*'))
-    .pipe(ghPages());
+    .pipe(ghPages({
+      branch: 'master'
+    }));
 });
