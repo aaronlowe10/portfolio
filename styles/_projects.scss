@@ -39,7 +39,7 @@
 }
 
 // 3 column layout
-@media all and (min-width: 800px) and (max-width: 1149px) {
+@media all and (min-width: 800px) and (max-width: 1599px) {
   .project {
     width: 39%;
     margin: 2% 0;
@@ -80,7 +80,7 @@
 }
 
 // 4 column layout (2 rows)
-@media all and (min-width: 1150px) {
+@media all and (min-width: 1600px) {
   .projects {
     padding-bottom: 14%;
   }
@@ -175,12 +175,6 @@
 @media all and (min-width: 550px) {
   .project-text-wrap {
     font-size: 1.2em;
-  }
-}
-
-@media all and (min-width: 1600px) {
-  .project-text-wrap {
-    font-size: 1.5em;
   }
 }
 

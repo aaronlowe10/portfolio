@@ -13,6 +13,7 @@ $blue: #087E8B;
 $black: #3C3C3C;
 
 $background-colour: $white;
+$background-gradient: linear-gradient(to bottom, lighten($red, 3%), darken($red, 7%));
 $text-colour: $black;
 
 $link-colour: $blue;
@@ -24,6 +25,8 @@ $nav-link-background-hover: $red;
 
 $button-text-colour: $white;
 $button-background-colour: $red;
+
+$section-background: $white;
 
 $project-title-background: rgba($red, 0.7);
 
