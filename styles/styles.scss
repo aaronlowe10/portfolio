@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: $background-colour;
 }
 
 *, *::before, *::after {
@@ -24,6 +25,11 @@ h1 {
 h2 {
   font-size: 1.5em;
   margin: 0.8em 0;
+
+  @media all and (min-width: 980px) {
+    font-size: 2em;
+    margin: 1em 0;
+  }
 }
 
 h3 {
@@ -89,7 +95,6 @@ body.modal-open {
 ---------------------*/
 html {
   font-family: $font-body;
-  background-color: $background-colour;
   color: $text-colour;
 }
 
@@ -121,10 +126,8 @@ header > div {
 .page-title {
   font-size: 1.5em;
   color: #F5F5F5;
-}
 
-@media all and (min-width: 650px) {
-  .page-title {
+  @media all and (min-width: 650px) {
     margin-left: 1rem;
     font-size: 2em;
   }
@@ -201,10 +204,8 @@ nav {
   width: 128px;
   margin: 1em;
   text-align: center;
-}
 
-@media all and (min-width: 400px) {
-  .skill {
+  @media all and (min-width: 400px) {
     width: 140px;
   }
 }
@@ -223,10 +224,8 @@ nav {
 .contact-detail {
   width: 100%;
   margin: 1.5em 0.5em;
-}
 
-@media all and (min-width: 650px) {
-  .contact-detail {
+  @media all and (min-width: 650px) {
     max-width: calc(33% - 1em);
   }
 }
