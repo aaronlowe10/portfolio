@@ -3,6 +3,7 @@ const path = require('path');
 const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const ghPages = require('gulp-gh-pages');
+const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 
 const BUILD_FOLDER = path.join(__dirname, 'build');
@@ -21,6 +22,7 @@ gulp.task('js', () => {
 
 gulp.task('images', () => {
   return gulp.src(path.join('images', '**', '*'))
+    .pipe(imagemin())
     .pipe(gulp.dest(path.join(BUILD_FOLDER, 'images')));
 });
 
