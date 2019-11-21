@@ -200,12 +200,18 @@ nav {
   .skill {
     width: 140px; } }
 
+/* Reports section
+---------------------*/
+.reports {
+  margin: 0 auto;
+  max-width: 1000px; }
+
 /* Projects section
 ---------------------*/
-.projects {
+.hexagons {
   position: relative; }
 
-.project {
+.hexagon {
   margin: 1em 0;
   cursor: pointer;
   overflow: hidden; }
@@ -215,80 +221,108 @@ nav {
   padding-bottom: 86%; }
 
 @media all and (min-width: 500px) {
-  .projects::after {
+  .hexagons::after {
     display: block;
     clear: both;
     content: ""; }
-  .project {
+  .hexagon {
     width: 55%;
     margin: 2%; } }
 
 @media all and (min-width: 500px) and (max-width: 799px) {
-  .projects {
+  .hexagons {
     padding-bottom: 25%; }
-  .project:nth-child(2n) {
+  .hexagon:nth-child(2n) {
     float: right;
     margin: -25% 0; } }
 
 @media all and (min-width: 800px) and (max-width: 1149px) {
-  .project {
+  .hexagon.project {
     width: 39%;
     margin: 2% 0; }
-  .project:nth-child(8n - 6) {
+  .hexagon.project:nth-child(8n - 6) {
     position: absolute;
     top: 0;
     right: 0;
     margin-top: 0; }
-  .project:nth-child(8n - 5) {
+  .hexagon.project:nth-child(8n - 5) {
     position: absolute;
     top: 15%;
     left: 30.5%; }
-  .project:nth-child(8n - 3) {
+  .hexagon.project:nth-child(8n - 3) {
     position: absolute;
     top: 34%;
     right: 0;
     margin-top: 0; }
-  .project:nth-child(8n - 2) {
+  .hexagon.project:nth-child(8n - 2) {
     position: absolute;
     top: 49%;
     left: 30.5%; }
-  .project:nth-child(8n) {
+  .hexagon.project:nth-child(8n) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0; } }
+
+@media all and (min-width: 800px) {
+  .hexagon.report {
+    width: 39%;
+    margin: 2% 0; }
+  .hexagon.report:nth-child(8n - 6) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0; }
+  .hexagon.report:nth-child(8n - 5) {
+    position: absolute;
+    top: 23%;
+    left: 30.5%; }
+  .hexagon.report:nth-child(8n - 3) {
+    position: absolute;
+    top: 34%;
+    right: 0;
+    margin-top: 0; }
+  .hexagon.report:nth-child(8n - 2) {
+    position: absolute;
+    top: 49%;
+    left: 30.5%; }
+  .hexagon.report:nth-child(8n) {
     position: absolute;
     bottom: 0;
     right: 0;
     margin-bottom: 0; } }
 
 @media all and (min-width: 1150px) {
-  .projects {
+  .hexagons.projects {
     padding-bottom: 14%; }
-  .project {
+  .hexagon.project {
     width: 29%; }
-  .project:nth-child(8n - 5) {
+  .hexagon.project:nth-child(8n - 5) {
     position: absolute;
     top: 20%;
     left: 23%;
     margin-top: 0; }
-  .project:nth-child(8n - 4) {
+  .hexagon.project:nth-child(8n - 4) {
     position: absolute;
     top: 60%;
     left: 23%;
     margin-top: 0; }
-  .project:nth-child(8n - 3) {
+  .hexagon.project:nth-child(8n - 3) {
     position: absolute;
     top: 0;
     left: 46%;
     margin-top: 0; }
-  .project:nth-child(8n - 2) {
+  .hexagon.project:nth-child(8n - 2) {
     position: absolute;
     top: 40%;
     left: 46%;
     margin-top: 0; }
-  .project:nth-child(8n - 1) {
+  .hexagon.project:nth-child(8n - 1) {
     position: absolute;
     top: 20%;
     left: 69%;
     margin-top: 0; }
-  .project:nth-child(8n) {
+  .hexagon.project:nth-child(8n) {
     position: absolute;
     top: 60%;
     left: 69%;
@@ -311,7 +345,7 @@ nav {
   .project-image {
     -webkit-filter: grayscale(0.8);
             filter: grayscale(0.8); }
-  .project:hover .project-image {
+  .hexagon:hover .project-image {
     -webkit-filter: none;
             filter: none; } }
 
